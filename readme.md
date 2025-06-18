@@ -5,7 +5,7 @@ This project provides an end-to-end sales analysis for a retail store using Pyth
 
 ---
 
-📊 Dataset Source
+## 📊 Dataset Source
 The sales data used in this project is sourced from the Superstore Dataset on Kaggle, which contains historical sales records of a global retail store, including details like order dates, regions, product categories, and financial metrics.
 https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
 
@@ -36,6 +36,10 @@ https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
  More analysis is mentioned in ./executive_summary
  
 ---
+
+## 📊Some Graphs from the project
+![image](https://github.com/user-attachments/assets/21c55760-5ad1-42c4-a885-55cd6a49e3ee)
+
 
 ## 🚀 Features
 
