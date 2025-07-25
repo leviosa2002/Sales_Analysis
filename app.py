@@ -32,7 +32,7 @@ sales_model, profit_model, scaler, label_encoders = load_models()
 # Load the dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv("superstore.csv", encoding='ISO-8859-1')
+    df = pd.read_csv("models/superstore.csv", encoding='ISO-8859-1')
     
     # Data preprocessing
     df['Order Date'] = pd.to_datetime(df['Order Date'])
