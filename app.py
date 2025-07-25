@@ -21,10 +21,10 @@ st.set_page_config(
 # Load the saved models
 @st.cache_resource
 def load_models():
-    sales_model = joblib.load('best_sales_model.pkl')
-    profit_model = joblib.load('best_profit_model.pkl')
-    scaler = joblib.load('feature_scaler.pkl')
-    label_encoders = joblib.load('label_encoders.pkl')
+    sales_model = joblib.load('models/best_sales_model.pkl')
+    profit_model = joblib.load('models/best_profit_model.pkl')
+    scaler = joblib.load('models/feature_scaler.pkl')
+    label_encoders = joblib.load('models/label_encoders.pkl')
     return sales_model, profit_model, scaler, label_encoders
 
 sales_model, profit_model, scaler, label_encoders = load_models()
@@ -205,7 +205,7 @@ if page == "Dashboard":
     
     # Executive Summary
     st.subheader("💡 Key Insights")
-    with open('executive_summary.txt', 'r') as file:
+    with open('models/executive_summary.txt', 'r') as file:
         summary = file.read()
     
     # Extract strategic recommendations section
