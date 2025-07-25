@@ -1,88 +1,81 @@
-# 🛍️ Store Sales Analysis | Python, Pandas, ML Models
+# Superstore Sales Analysis Dashboard
 
-This project provides an end-to-end sales analysis for a retail store using Python and Jupyter Notebook. It includes visualizations, KPIs, and trained machine learning models to predict and optimize sales and profit strategies.
+This interactive Streamlit dashboard provides comprehensive analysis and predictions for the Superstore dataset.
 
+## Features
 
----
+- **Dashboard Overview**: Key performance indicators and summary metrics
+- **Sales Analysis**: Detailed breakdown of sales by time period, region, and more
+- **Customer Analysis**: Customer segmentation and top customer insights
+- **Product Analysis**: Category and sub-category performance metrics
+- **Sales & Profit Predictions**: ML-powered prediction tool for sales forecasting
 
-## 📊 Dataset Source
-The sales data used in this project is sourced from the Superstore Dataset on Kaggle, which contains historical sales records of a global retail store, including details like order dates, regions, product categories, and financial metrics.
-https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+## Setup Instructions
 
----
+1. Clone this repository
+2. Create and activate a virtual environment (recommended):
+   ```
+   # Windows
+   python -m venv venv
+   venv\Scripts\activate
 
-## 📂 Project Structure
-
-```
-📦 Store_Sales_Analysis/
-├── Store_Sales_Analysis.ipynb
-├── models/
-│   ├── best_sales_model.pkl
-│   ├── best_profit_model.pkl
-│   ├── feature_scaler.pkl
-│   └── label_encoders.pkl
-├── data/
-│   └── superstore.csv
-├── README.md
-└── requirements.txt
-```
----
-
-## 🤖 PREDICTIVE MODEL PERFORMANCE
-• Sales Prediction Model: Gradient Boosting (R² = 0.193)
-• Profit Prediction Model: Gradient Boosting (R² = 0.191)
-• Model Accuracy: Fair
-
- More analysis is mentioned in ./executive_summary
- 
----
-
-## 📊Some Graphs from the project
-![image](https://github.com/user-attachments/assets/21c55760-5ad1-42c4-a885-55cd6a49e3ee)
-
-
-## 🚀 Features
-
-- 📊 Exploratory Data Analysis with trends & KPIs
-- 🧠 Machine learning models for:
-  - Predicting **top sales months/products**
-  - Identifying **most profitable strategies**
-- 🔍 Data preprocessing with Scikit-learn encoders and scalers
-- 📈 Visual insights using Seaborn, Plotly, and Matplotlib
-
----
-
-## 🛠️ Installation & Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/store-sales-analysis.git
-cd store-sales-analysis
-```
-
-2. Create a virtual environment (optional):
-```bash
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-```
-
+   # Mac/Linux
+   python -m venv venv
+   source venv/bin/activate
+   ```
 3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+   ```
+   pip install -r requirements.txt
+   ```
+4. Run the Streamlit app:
+   ```
+   streamlit run app.py
+   ```
+   
+If you encounter a "streamlit command not found" error, ensure that:
+- You've installed the requirements correctly using `pip install -r requirements.txt`
+- You're using the environment where streamlit was installed
+- Try using the full path: `python -m streamlit run app.py`
 
-4. Run the Jupyter Notebook:
-```bash
-jupyter notebook Store_Sales_Analysis.ipynb
-```
----
+## Data
 
-## 📬 Contact
+The application uses the Superstore dataset (`superstore.csv`), which contains retail sales data including:
+- Orders, customers, and products information
+- Sales and profit metrics
+- Geographic data
+- Shipping information
 
-For questions or collaborations, reach out via GitHub Issues or email.
+## Machine Learning Models
 
----
+The application uses pre-trained machine learning models:
+- `best_sales_model.pkl`: Gradient Boosting model for sales prediction
+- `best_profit_model.pkl`: Gradient Boosting model for profit prediction
+- `feature_scaler.pkl`: StandardScaler for feature normalization
+- `label_encoders.pkl`: Label encoders for categorical variables
 
-## 📘 License
+## Usage
 
-MIT License
+The sidebar navigation menu allows you to switch between different analysis pages:
+
+1. **Dashboard**: View overall KPIs and business performance metrics
+2. **Sales Analysis**: Explore sales trends, regional performance, and discount effects
+3. **Customer Analysis**: Analyze customer segments and top customers
+4. **Product Analysis**: Investigate product category performance and profitability
+5. **Predictions**: Make sales and profit predictions based on different scenarios
+
+## Screenshots
+
+*Dashboard Overview:*
+![Dashboard](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
+
+*Prediction Interface:*
+![Predictions](https://via.placeholder.com/800x400?text=Predictions+Screenshot)
+
+## Development
+
+This project was developed using:
+- Python 3.8+
+- Streamlit for web interface
+- Pandas and NumPy for data processing
+- Plotly and Matplotlib for visualization
+- Scikit-learn for machine learning models 
